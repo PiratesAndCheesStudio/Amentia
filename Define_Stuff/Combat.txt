@@ -5,4 +5,14 @@ Initiative will be rolled
 if ambush => + 10 Initiative for the ambusher
 
 Initiative DESC will start the fight
+
 First you can Move or Attack
+
+Movement is defined by your move points (1 move point = 1 field)
+
+When you attack a enemy, the math will be
+
+if yourAttackRoll > hisDefensePoints then
+    the damage will be rolled and the enemy tack that
+else
+    you miss and the enemy if he has the abillity to strike back
