@@ -1,0 +1,8 @@
+    START
+=============
+Initiative will be rolled
+
+if ambush => + 10 Initiative for the ambusher
+
+Initiative DESC will start the fight
+First you can Move or Attack

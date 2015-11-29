@@ -1,0 +1,33 @@
+BasicHero =>
+
+        Basic
+    ===============
+    Initiative
+
+        Attack
+    ===============
+    Strength
+    Constitution
+    Intelligence
+
+        Defense
+    ===============
+    AC
+
+        Movement
+    ===============
+    Speed
+
+--------------------------------------------------------------------------------
+
+CLASSES
+
+Warrior => Alpha
+Mage    => Beta
+Archer  => Alpha
+Rouge   => Release
+Paladin => Alpha
+Warlock => Beta
+Druid   => Release
+
+--------------------------------------------------------------------------------
