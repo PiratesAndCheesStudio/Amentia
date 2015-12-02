@@ -13,6 +13,7 @@ public class CreateCharachter : MonoBehaviour {
     private BasePlayer newPlayer;
     private bool isMage;
     private bool isWarrior;
+    private string playerName = "Enter Name";
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class CreateCharachter : MonoBehaviour {
 	}
 
     void OnGUI() {
+        playerName = GUILayout.TextArea(playerName, 15);
         isMage      = GUILayout.Toggle(isMage, "Mage");
         isWarrior   = GUILayout.Toggle(isWarrior, "Warrior");
 
@@ -36,6 +38,7 @@ public class CreateCharachter : MonoBehaviour {
                 newPlayer.PlayerClass = new BaseWarriorClass();
             }
 
+            newPlayer.PlayerName = playerName;
             newPlayer.PlayerLevel = 1;
             newPlayer.Initiative = newPlayer.PlayerClass.Initiative;
             newPlayer.Intelligence = newPlayer.PlayerClass.Intelligence;
@@ -43,8 +46,9 @@ public class CreateCharachter : MonoBehaviour {
             newPlayer.Constitution = newPlayer.PlayerClass.Constitution;
             newPlayer.Ac = newPlayer.PlayerClass.Ac;
             newPlayer.Speed = newPlayer.PlayerClass.Speed;
-
+            Save.saveAllInfos();
             Debug.Log("Player Class" + newPlayer.PlayerClass.CharacterClassName);
+            Debug.Log("Player Name" + newPlayer.PlayerName);
             Debug.Log("Player Initiative" + newPlayer.Initiative);
             Debug.Log("Player Intelligence" + newPlayer.Intelligence);
             Debug.Log("Player Strength" + newPlayer.Strength);
