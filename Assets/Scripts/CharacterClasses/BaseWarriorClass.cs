@@ -10,7 +10,7 @@ using System.Collections;
 
 public class BaseWarriorClass : BaseCharachterClass {
 
-    public void WarroirClass() {
+    public BaseWarriorClass() {
         CharacterClassName = "Warrior";
         CharacterClassDescription = "This is a awsome warrior!";
         Initiative = 10;

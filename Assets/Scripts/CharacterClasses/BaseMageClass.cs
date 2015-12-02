@@ -10,7 +10,7 @@ using System.Collections;
 
 public class BaseMageClass : BaseCharachterClass {
 
-    public void MageClass() {
+    public BaseMageClass() {
         CharacterClassName = "Mage";
         CharacterClassDescription = "This is a awsome Mage!";
         Initiative = 10;
