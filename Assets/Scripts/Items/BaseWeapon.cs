@@ -19,17 +19,11 @@ public class BaseWeapon : BaseStatItem {
     }
 
     private WeaponTypes weaponType;
-    private int spellEffect;
 
     //Getter setter
     public WeaponTypes WeaponType {
         get { return weaponType; }
         set { weaponType = value; }
-    }
-
-    public int SpellEffectID {
-        get { return spellEffect; }
-        set { spellEffect = value;  }
     }
 
 }
