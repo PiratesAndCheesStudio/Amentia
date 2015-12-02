@@ -19,7 +19,7 @@ public class BasePotion : BaseStatItem {
     private PotionTypes potionType;
 
     //Getter setter
-    public PotionTypes WeaponType {
+    public PotionTypes PotionType {
         get { return potionType; }
         set { potionType = value; }
     }
