@@ -23,8 +23,8 @@ BasicHero =>
 CLASSES
 
 Warrior => Alpha
-Mage    => Beta
-Archer  => Alpha
+Mage    => Alpha
+Archer  => Beta
 Rouge   => Release
 Paladin => Alpha
 Warlock => Beta
