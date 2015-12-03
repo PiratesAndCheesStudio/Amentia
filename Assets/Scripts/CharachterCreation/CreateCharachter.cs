@@ -46,6 +46,7 @@ public class CreateCharachter : MonoBehaviour {
             newPlayer.Constitution = newPlayer.PlayerClass.Constitution;
             newPlayer.Ac = newPlayer.PlayerClass.Ac;
             newPlayer.Speed = newPlayer.PlayerClass.Speed;
+			saveNewCharachterInfos();
             Save.saveAllInfos();
             Debug.Log("Player Class" + newPlayer.PlayerClass.CharacterClassName);
             Debug.Log("Player Name" + newPlayer.PlayerName);
@@ -56,5 +57,24 @@ public class CreateCharachter : MonoBehaviour {
             Debug.Log("Player Ac" + newPlayer.Ac);
             Debug.Log("Player Speed" + newPlayer.Speed);
         }
+
+		if (GUILayout.Button ("Load")) {
+			Application.LoadLevel("scene2");
+		}
     }
+
+	//This saves all char infos to our game object
+	//IMPORTANT!
+	//DO ONY CALL THIS FUNCTION IF WE HAVE A NEWPLAYER OBJECT
+	//WITH ALL THE DATA!!!!
+	private void saveNewCharachterInfos() {
+		GameInfo.PlayerName 	= newPlayer.PlayerName;
+		GameInfo.PlayerLevel 	= newPlayer.PlayerLevel;
+		GameInfo.Initiative 	= newPlayer.Initiative;
+		GameInfo.Intelligence 	= newPlayer.Intelligence;
+		GameInfo.Strength 		= newPlayer.Strength;
+		GameInfo.Constitution 	= newPlayer.Constitution;
+		GameInfo.Ac 			= newPlayer.Ac;
+		GameInfo.Speed 			= newPlayer.Speed;
+	}
 }
