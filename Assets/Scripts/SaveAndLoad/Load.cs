@@ -19,6 +19,10 @@ public class Load {
         GameInfo.Constitution   = PlayerPrefs.GetInt("AMENTIA_CONSTITUTION");
         GameInfo.Ac             = PlayerPrefs.GetInt("AMENTIA_AC");
         GameInfo.Speed          = PlayerPrefs.GetInt("AMENTIA_SPEED");
+
+        if (PlayerPrefs.GetString("AMENTIA_GEARITEM1") != null ) {
+            GameInfo.EquipmentOne = (BaseEquipement)Serialization.load("AMENTIA_GEARITEM1");
+        }
     }
 
 }

@@ -8,6 +8,7 @@
 using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
 public class BaseItem {
 
     //Basic item stuff

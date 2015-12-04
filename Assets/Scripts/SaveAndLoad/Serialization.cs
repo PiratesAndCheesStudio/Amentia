@@ -21,7 +21,12 @@ public class Serialization  {
 		PlayerPrefs.SetString(key, temp);
 	}
 
-	public static object load() {
-
+	public static object load(string key) {
+        string temp = PlayerPrefs.GetString(key);
+        if (temp == string.Empty) {
+            return null;
+        }
+        MemoryStream memoryStream = new MemoryStream(System.Convert.FromBase64String(temp));
+        return binaryFormatter.Deserialize(memoryStream);
 	}
 }
