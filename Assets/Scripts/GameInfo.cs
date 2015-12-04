@@ -24,4 +24,7 @@ public class GameInfo : MonoBehaviour {
     public static int Intelligence { get; set; }
     public static int Ac { get; set; }
     public static int Speed { get; set; }
+    public static int Gold { get; set; }
+    public static int CurrentXP { get; set; }
+    public static int RequiredXP { get; set; }
 }

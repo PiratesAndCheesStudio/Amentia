@@ -37,25 +37,9 @@ public class CreateCharachter : MonoBehaviour {
             else if (isWarrior) {
                 newPlayer.PlayerClass = new BaseWarriorClass();
             }
-
-            newPlayer.PlayerName = playerName;
-            newPlayer.PlayerLevel = 1;
-            newPlayer.Initiative = newPlayer.PlayerClass.Initiative;
-            newPlayer.Intelligence = newPlayer.PlayerClass.Intelligence;
-            newPlayer.Strength = newPlayer.PlayerClass.Strength;
-            newPlayer.Constitution = newPlayer.PlayerClass.Constitution;
-            newPlayer.Ac = newPlayer.PlayerClass.Ac;
-            newPlayer.Speed = newPlayer.PlayerClass.Speed;
+            createNewPlayer();
 			saveNewCharachterInfos();
             Save.saveAllInfos();
-            Debug.Log("Player Class" + newPlayer.PlayerClass.CharacterClassName);
-            Debug.Log("Player Name" + newPlayer.PlayerName);
-            Debug.Log("Player Initiative" + newPlayer.Initiative);
-            Debug.Log("Player Intelligence" + newPlayer.Intelligence);
-            Debug.Log("Player Strength" + newPlayer.Strength);
-            Debug.Log("Player Constitution" + newPlayer.Constitution);
-            Debug.Log("Player Ac" + newPlayer.Ac);
-            Debug.Log("Player Speed" + newPlayer.Speed);
         }
 
 		if (GUILayout.Button ("Load")) {
@@ -76,5 +60,18 @@ public class CreateCharachter : MonoBehaviour {
 		GameInfo.Constitution 	= newPlayer.Constitution;
 		GameInfo.Ac 			= newPlayer.Ac;
 		GameInfo.Speed 			= newPlayer.Speed;
+        GameInfo.Gold           = newPlayer.Gold;
 	}
+
+    private void createNewPlayer() {
+        newPlayer.PlayerName    = playerName;
+        newPlayer.PlayerLevel   = 1;
+        newPlayer.Initiative    = newPlayer.PlayerClass.Initiative;
+        newPlayer.Intelligence  = newPlayer.PlayerClass.Intelligence;
+        newPlayer.Strength      = newPlayer.PlayerClass.Strength;
+        newPlayer.Constitution  = newPlayer.PlayerClass.Constitution;
+        newPlayer.Ac            = newPlayer.PlayerClass.Ac;
+        newPlayer.Speed         = newPlayer.PlayerClass.Speed;
+        newPlayer.Gold          = 10;
+    }
 }

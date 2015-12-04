@@ -21,7 +21,18 @@ public class BasePlayer {
     private int ac;
     private int speed;
 
+    //Char stuff
+    private int gold;
+
+    //Level stuff
+    private int currentXP;
+    private int requiredXP;
+
     //Getters and Setter!
+    public int CurrentXP {get; set;}
+
+    public int RequiredXP { get; set; }
+
     public string PlayerName {
         get { return playerName; }
         set { playerName = value; }
@@ -67,5 +78,6 @@ public class BasePlayer {
         set { speed = value; }
     }
 
+    public int Gold { get; set; }
 
 }

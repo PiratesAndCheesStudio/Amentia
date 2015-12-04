@@ -9,6 +9,8 @@ using System.Collections;
 
 public class CombatStateMachine : MonoBehaviour {
 
+    private bool hasAddedXP = false;
+
     public enum BattleStates {
         START,
         PLAYERTURN,
@@ -35,6 +37,10 @@ public class CombatStateMachine : MonoBehaviour {
             case (BattleStates.LOSE):
                 break;
             case (BattleStates.WIN):
+                if (!hasAddedXP) {
+                    XPIncrease.add();
+                    hasAddedXP = true;
+                }
                 break;
         }	
 	}

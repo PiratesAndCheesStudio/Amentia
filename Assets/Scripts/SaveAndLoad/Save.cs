@@ -19,6 +19,7 @@ public class Save {
         PlayerPrefs.SetInt("AMENTIA_INTELLIGENCE", GameInfo.Intelligence);
         PlayerPrefs.SetInt("AMENTIA_AC", GameInfo.Ac);
         PlayerPrefs.SetInt("AMENTIA_SPEED", GameInfo.Speed);
+        PlayerPrefs.SetInt("AMENTIA_GOLD", GameInfo.Gold);
         if (GameInfo.EquipmentOne != null) {
             Serialization.save("AMENTIA_GEARITEM1", GameInfo.EquipmentOne);
         }
