@@ -25,8 +25,14 @@ public class PlayerController : MonoBehaviour {
         }
 
         transform.Rotate(0, Input.GetAxis("Horizontal") * rotateSpeed, 0);
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
+        Vector3 forward = transform.TransformDirection(Vector3.back);
         float speed = forwardSpeed * Input.GetAxis("Vertical");
         playerController.SimpleMove(speed * forward);
+
+        if (Input.GetAxis("Run") == 1 && playerController.isGrounded) {
+            forwardSpeed = forwardSpeed * 1.5f;
+
+        }
+
 	}
 }
