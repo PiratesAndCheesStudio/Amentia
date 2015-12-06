@@ -14,6 +14,7 @@ public class GameInfo : MonoBehaviour {
         DontDestroyOnLoad(transform.gameObject);
     }
 
+    public static bool isMale { get; set; }
     public static BaseEquipement EquipmentOne { get; set; }
     public static string PlayerName {get;set;}
     public static int PlayerLevel { get; set; }

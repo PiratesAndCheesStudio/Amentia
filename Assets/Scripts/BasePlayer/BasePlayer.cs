@@ -23,6 +23,7 @@ public class BasePlayer {
 
     //Char stuff
     private int gold;
+    private int statPointsToAllocate;
 
     //Level stuff
     private int currentXP;
@@ -32,6 +33,8 @@ public class BasePlayer {
     public int CurrentXP {get; set;}
 
     public int RequiredXP { get; set; }
+
+    public int StatPointsToAllocate { get; set; }
 
     public string PlayerName {
         get { return playerName; }
