@@ -11,14 +11,32 @@ using System.Collections;
 
 public class StatAllocationModule {
 
-    private string[] statNames = new string[2] { "strength", "intelligence" };
-    private string[] statDesc = new string[2] { "Melee attack mod", "Magic attack mod"};
-    private bool[] statsSelections = new bool[2];
-    public int[] pointsToAllocate = new int[2];
-    private int[] baseStatPoints = new int[2];
+    private string[] statNames = new string[8]{
+												"Stamina", 
+												"Intelligence",
+												"Strenght",
+												"Agillity",
+												"Dexterity",
+												"Trading",
+												"Luck",
+												"Crit"
+											   };
+    private string[] statDesc = new string[8]{
+												"Health mod", 
+												"Spell dmg mod",
+												"Physic dmg mod",
+												"Doge mod",
+												"Physic dmg mod(Bow)",
+												"Lower the prices",
+												"More loot!",
+												"Crit mod"
+											 };
 
-    private int availPoints = 5;
-    public bool didRunOnce = false;
+    private bool[] statsSelections 	= new bool[8];
+    public int[] pointsToAllocate 	= new int[8];
+    private int[] baseStatPoints 	= new int[8];
+    private int availPoints 		= 5;
+    public bool didRunOnce 			= false;
 
     public void displayStatAllocationModule() {
 
@@ -63,12 +81,29 @@ public class StatAllocationModule {
 
         BaseCharachterClass cclass = GameInfo.PlayerClass;
 
-        pointsToAllocate[0] = cclass.Strength;
-        baseStatPoints[0]   = cclass.Strength;
+        pointsToAllocate[0] = cclass.Stamina;
+		baseStatPoints[0]   = cclass.Stamina;
 
-        pointsToAllocate[1] = cclass.Intelligence;
-        baseStatPoints[1]   = cclass.Intelligence;
+        pointsToAllocate[1] = cclass.Intellect;
+		baseStatPoints[1]   = cclass.Intellect;
 
+		pointsToAllocate[2] = cclass.Strength;
+		baseStatPoints[2]   = cclass.Strength;
+
+		pointsToAllocate[3] = cclass.Agillity;
+		baseStatPoints[3]   = cclass.Agillity;
+
+		pointsToAllocate[4] = cclass.Dexterity;
+		baseStatPoints[4]   = cclass.Dexterity;
+
+		pointsToAllocate[5] = cclass.Trading;
+		baseStatPoints[5]   = cclass.Trading;
+
+		pointsToAllocate[6] = cclass.Luck;
+		baseStatPoints[6]   = cclass.Luck;
+
+		pointsToAllocate[7] = cclass.Crit;
+		baseStatPoints[7]   = cclass.Crit;
     }
 
 }

@@ -13,15 +13,9 @@ public class Save {
     public static void saveAllInfos() {
         PlayerPrefs.SetInt("AMENTIA_PLAYERLEVEL", GameInfo.PlayerLevel);
         PlayerPrefs.SetString("AMENTIA_PLAYERNAME", GameInfo.PlayerName);
-        PlayerPrefs.SetInt("AMENTIA_INITIATIVE", GameInfo.Initiative);
-        PlayerPrefs.SetInt("AMENTIA_STRENGTH", GameInfo.Strength);
-        PlayerPrefs.SetInt("AMENTIA_CONSTITUTION", GameInfo.Constitution);
-        PlayerPrefs.SetInt("AMENTIA_INTELLIGENCE", GameInfo.Intelligence);
-        PlayerPrefs.SetInt("AMENTIA_AC", GameInfo.Ac);
-        PlayerPrefs.SetInt("AMENTIA_SPEED", GameInfo.Speed);
         PlayerPrefs.SetInt("AMENTIA_GOLD", GameInfo.Gold);
-        if (GameInfo.EquipmentOne != null) {
-            Serialization.save("AMENTIA_GEARITEM1", GameInfo.EquipmentOne);
+        if (GameInfo.PlayerClass != null) {
+			Serialization.save("AMENTIA_PLAYERCLASS", GameInfo.PlayerClass);
         }
         Debug.Log("SAVE DONE!");
     }

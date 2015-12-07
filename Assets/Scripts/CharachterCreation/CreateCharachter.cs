@@ -37,9 +37,9 @@ public class CreateCharachter : MonoBehaviour {
             else if (isWarrior) {
                 newPlayer.PlayerClass = new BaseWarriorClass();
             }
-            createNewPlayer();
+            /*createNewPlayer();
 			saveNewCharachterInfos();
-            Save.saveAllInfos();
+            Save.saveAllInfos();*/
         }
 
 		if (GUILayout.Button ("Load")) {
@@ -51,7 +51,7 @@ public class CreateCharachter : MonoBehaviour {
 	//IMPORTANT!
 	//DO ONY CALL THIS FUNCTION IF WE HAVE A NEWPLAYER OBJECT
 	//WITH ALL THE DATA!!!!
-	private void saveNewCharachterInfos() {
+	/*private void saveNewCharachterInfos() {
 		GameInfo.PlayerName 	= newPlayer.PlayerName;
 		GameInfo.PlayerLevel 	= newPlayer.PlayerLevel;
 		GameInfo.Initiative 	= newPlayer.Initiative;
@@ -73,5 +73,5 @@ public class CreateCharachter : MonoBehaviour {
         newPlayer.Ac            = newPlayer.PlayerClass.Ac;
         newPlayer.Speed         = newPlayer.PlayerClass.Speed;
         newPlayer.Gold          = 10;
-    }
+    }*/
 }

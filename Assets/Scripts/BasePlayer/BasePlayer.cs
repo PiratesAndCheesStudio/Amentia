@@ -14,12 +14,6 @@ public class BasePlayer {
     private string playerName;
     private int playerLevel;
     private BaseCharachterClass playerClass;
-    private int initiative;
-    private int strength;
-    private int constitution;
-    private int intelligence;
-    private int ac;
-    private int speed;
 
     //Char stuff
     private int gold;
@@ -31,9 +25,7 @@ public class BasePlayer {
 
     //Getters and Setter!
     public int CurrentXP {get; set;}
-
     public int RequiredXP { get; set; }
-
     public int StatPointsToAllocate { get; set; }
 
     public string PlayerName {
@@ -49,36 +41,6 @@ public class BasePlayer {
     public BaseCharachterClass PlayerClass {
         get { return playerClass; }
         set { playerClass = value; }
-    }
-
-    public int Initiative {
-        get { return initiative; }
-        set { initiative = value; }
-    }
-
-    public int Strength {
-        get { return strength; }
-        set { strength = value; }
-    }
-
-    public int Constitution {
-        get { return constitution; }
-        set { constitution = value; }
-    }
-
-    public int Intelligence {
-        get { return intelligence; }
-        set { intelligence = value; }
-    }
-
-    public int Ac {
-        get { return ac; }
-        set { ac = value; }
-    }
-
-    public int Speed {
-        get { return speed; }
-        set { speed = value; }
     }
 
     public int Gold { get; set; }

@@ -13,16 +13,11 @@ public class Load {
     public static void loadAllInfos() {
         GameInfo.PlayerName     = PlayerPrefs.GetString("AMENTIA_PLAYERNAME");
         GameInfo.PlayerLevel    = PlayerPrefs.GetInt("AMENTIA_PLAYERLEVEL");
-        GameInfo.Initiative     = PlayerPrefs.GetInt("AMENTIA_INITIATIVE");
-        GameInfo.Intelligence   = PlayerPrefs.GetInt("AMENTIA_INTELLIGENCE");
-        GameInfo.Strength       = PlayerPrefs.GetInt("AMENTIA_STRENGTH");
-        GameInfo.Constitution   = PlayerPrefs.GetInt("AMENTIA_CONSTITUTION");
-        GameInfo.Ac             = PlayerPrefs.GetInt("AMENTIA_AC");
-        GameInfo.Speed          = PlayerPrefs.GetInt("AMENTIA_SPEED");
         GameInfo.Gold           = PlayerPrefs.GetInt("AMENTIA_GOLD");
 
-        if (PlayerPrefs.GetString("AMENTIA_GEARITEM1") != null ) {
-            GameInfo.EquipmentOne = (BaseEquipement)Serialization.load("AMENTIA_GEARITEM1");
+		//Try to load the player class
+		if (PlayerPrefs.GetString("AMENTIA_PLAYERCLASS") != null ) {
+			GameInfo.PlayerClass = (BaseCharachterClass)Serialization.load("AMENTIA_PLAYERCLASS");
         }
     }
 

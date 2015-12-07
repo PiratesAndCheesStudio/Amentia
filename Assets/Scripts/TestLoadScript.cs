@@ -14,12 +14,7 @@ public class TestLoadScript : MonoBehaviour {
 		Load.loadAllInfos ();
 		Debug.Log("Player Name" + GameInfo.PlayerName);
 		Debug.Log("Player Level" + GameInfo.PlayerLevel);
-		Debug.Log("Player Initiative" + GameInfo.Initiative);
-		Debug.Log("Player Intelligence" + GameInfo.Intelligence);
-		Debug.Log("Player Strength" + GameInfo.Strength);
-		Debug.Log("Player Constitution" + GameInfo.Constitution);
-		Debug.Log("Player Ac" + GameInfo.Ac);
-		Debug.Log("Player Speed" + GameInfo.Speed);
+		Debug.Log("Player Stamina" + GameInfo.PlayerClass.Stamina);
 	}
 	
 	// Update is called once per frame

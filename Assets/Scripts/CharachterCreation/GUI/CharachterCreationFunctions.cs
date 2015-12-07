@@ -59,9 +59,15 @@ public class CharachterCreationFunctions {
                     chooseClass(classSelection);
                     CharachterCreationGUI.currentState = CharachterCreationGUI.createCharacterStats.STATALLOCATION;
                 } else if (CharachterCreationGUI.currentState == CharachterCreationGUI.createCharacterStats.STATALLOCATION) {
-                    GameInfo.Strength       = statAllocationModule.pointsToAllocate[0];
-                    GameInfo.Intelligence   = statAllocationModule.pointsToAllocate[1];
-                    CharachterCreationGUI.currentState = CharachterCreationGUI.createCharacterStats.FINALSETUP;
+                    GameInfo.PlayerClass.Stamina       	= statAllocationModule.pointsToAllocate[0];
+					GameInfo.PlayerClass.Intellect   	= statAllocationModule.pointsToAllocate[1];
+					GameInfo.PlayerClass.Strength		= statAllocationModule.pointsToAllocate[2];
+					GameInfo.PlayerClass.Agillity		= statAllocationModule.pointsToAllocate[3];
+					GameInfo.PlayerClass.Dexterity		= statAllocationModule.pointsToAllocate[4];
+					GameInfo.PlayerClass.Trading		= statAllocationModule.pointsToAllocate[5];
+					GameInfo.PlayerClass.Luck			= statAllocationModule.pointsToAllocate[6];
+					GameInfo.PlayerClass.Crit			= statAllocationModule.pointsToAllocate[7];
+                    CharachterCreationGUI.currentState 	= CharachterCreationGUI.createCharacterStats.FINALSETUP;
                 }
             }
         } else {
@@ -115,11 +121,25 @@ public class CharachterCreationFunctions {
 
         if (classType == 0) {
             BaseCharachterClass tempClass = new BaseWarriorClass();
-            string tempStats = "Strenght: " + tempClass.Strength + "\n" + "Intelligence: " + tempClass.Intelligence;
+            string tempStats = "Strenght: " + tempClass.Stamina + "\n" + 
+					"Intelligence: " + tempClass.Intellect + "\n" + 
+					"Strength: " + tempClass.Strength  + "\n" + 
+					"Agillity: " + tempClass.Agillity + "\n" +
+					"Dexterity: " + tempClass.Dexterity + "\n" +
+					"Trading: " + tempClass.Trading + "\n" +
+					"Luck: " + tempClass.Luck + "\n" +
+					"Crit: " + tempClass.Crit;
             return tempStats;
         } else if (classType == 1) {
             BaseCharachterClass tempClass = new BaseMageClass();
-            string tempStats = "Strenght: " + tempClass.Strength + "\n" + "Intelligence: " + tempClass.Intelligence;
+			string tempStats = "Strenght: " + tempClass.Stamina + "\n" + 
+				"Intelligence: " + tempClass.Intellect + "\n" + 
+					"Strength: " + tempClass.Strength  + "\n" + 
+					"Agillity: " + tempClass.Agillity + "\n" +
+					"Dexterity: " + tempClass.Dexterity + "\n" +
+					"Trading: " + tempClass.Trading + "\n" +
+					"Luck: " + tempClass.Luck + "\n" +
+					"Crit: " + tempClass.Crit;
             return tempStats;
         }
 
