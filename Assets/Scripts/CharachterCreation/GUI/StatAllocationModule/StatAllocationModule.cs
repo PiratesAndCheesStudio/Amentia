@@ -11,30 +11,28 @@ using System.Collections;
 
 public class StatAllocationModule {
 
-    private string[] statNames = new string[8]{
+    private string[] statNames = new string[7]{
 												"Stamina", 
 												"Intelligence",
 												"Strenght",
 												"Agillity",
 												"Dexterity",
 												"Trading",
-												"Luck",
-												"Crit"
+												"Luck"
 											   };
-    private string[] statDesc = new string[8]{
+    private string[] statDesc = new string[7]{
 												"Health mod", 
 												"Spell dmg mod",
 												"Physic dmg mod",
 												"Doge mod",
 												"Physic dmg mod(Bow)",
 												"Lower the prices",
-												"More loot!",
-												"Crit mod"
+												"More loot!"
 											 };
 
-    private bool[] statsSelections 	= new bool[8];
-    public int[] pointsToAllocate 	= new int[8];
-    private int[] baseStatPoints 	= new int[8];
+    private bool[] statsSelections 	= new bool[7];
+    public int[] pointsToAllocate 	= new int[7];
+    private int[] baseStatPoints 	= new int[7];
     private int availPoints 		= 5;
     public bool didRunOnce 			= false;
 
@@ -102,8 +100,6 @@ public class StatAllocationModule {
 		pointsToAllocate[6] = cclass.Luck;
 		baseStatPoints[6]   = cclass.Luck;
 
-		pointsToAllocate[7] = cclass.Crit;
-		baseStatPoints[7]   = cclass.Crit;
     }
 
 }

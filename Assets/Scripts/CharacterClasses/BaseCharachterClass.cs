@@ -17,15 +17,30 @@ public class BaseCharachterClass {
     private string charachterClassDescription;
 
     //Stats
-	private int stamina; // Healthmod
-	private int intellect; // Spell dmg mod
-	private int strength;
+	private int stamina 	= 12; // Healthmod
+	private int intellect 	= 6; // Spell dmg mod
+	private int strength	= 8;
 	private int armor; // Damage reduce mod
-	private int agillity; // Doge mod
-	private int dexterity; // Physic dmg mod (Bow)
-	private int trading; // Lower prices
-	private int luck; // More loot, yeah!
-	private int crit; // Crit mod
+	private int agillity	= 5; // Doge mod
+	private int dexterity	= 3; // Physic dmg mod (Bow)
+	private int trading		= 5; // Lower prices
+	private int luck		= 5; // More loot, yeah!
+	private int crit		= 2; // Crit mod
+
+	//Stat bonuses for the classes
+	public enum mainStatBonuses {
+		STAMINA,
+		STRENGHT,
+		INTELLECT,
+		DEXTERITY
+	}
+
+	public enum secondStatBonuses {
+		STAMINA,
+		STRENGHT,
+		INTELLECT,
+		DEXTERITY
+	}
 
     //Getter and setters for the stuff in c# style bitch!
     public string CharacterClassName {

@@ -66,7 +66,6 @@ public class CharachterCreationFunctions {
 					GameInfo.PlayerClass.Dexterity		= statAllocationModule.pointsToAllocate[4];
 					GameInfo.PlayerClass.Trading		= statAllocationModule.pointsToAllocate[5];
 					GameInfo.PlayerClass.Luck			= statAllocationModule.pointsToAllocate[6];
-					GameInfo.PlayerClass.Crit			= statAllocationModule.pointsToAllocate[7];
                     CharachterCreationGUI.currentState 	= CharachterCreationGUI.createCharacterStats.FINALSETUP;
                 }
             }
