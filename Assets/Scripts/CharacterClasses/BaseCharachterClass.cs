@@ -62,5 +62,7 @@ public class BaseCharachterClass {
 	public int Trading {get; set;}
 	public int Luck {get; set;}
 	public int Crit {get; set;}
+	public mainStatBonuses MainStatBonuses {get; set;}
+	public secondStatBonuses SecondStatBonuses {get; set;}
 
 }

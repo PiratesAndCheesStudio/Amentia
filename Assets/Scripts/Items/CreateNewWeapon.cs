@@ -63,26 +63,8 @@ public class CreateNewWeapon : MonoBehaviour {
     */
     private void chooseWeaponType() {
         int randTemp = Random.Range(1, 5);
-
-        switch (randTemp) {
-
-            case 1:
-                newWeapon.WeaponType = BaseWeapon.WeaponTypes.SWORD;
-                break;
-            case 2:
-                newWeapon.WeaponType = BaseWeapon.WeaponTypes.STAFF;
-                break;
-            case 3:
-                newWeapon.WeaponType = BaseWeapon.WeaponTypes.DAGGER;
-                break;
-            case 4:
-                newWeapon.WeaponType = BaseWeapon.WeaponTypes.BOW;
-                break;
-            case 5:
-                newWeapon.WeaponType = BaseWeapon.WeaponTypes.SHIELD;
-                break;
-
-        }
+		System.Array weapons = System.Enum.GetValues(typeof(BaseWeapon.WeaponTypes));
+		newWeapon.WeaponType = (BaseWeapon.WeaponTypes)weapons.GetValue(Random.Range(0, weapons.Length));
     }
 
 }

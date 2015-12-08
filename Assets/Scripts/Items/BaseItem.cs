@@ -7,6 +7,7 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class BaseItem {
@@ -26,6 +27,45 @@ public class BaseItem {
         POTION,
         CHEST
     }
+
+	public BaseItem(Dictionary<string, string> itemsDictionary) {
+		itemName 	= itemsDictionary["item_name"];
+		itemID 		= int.Parse(itemsDictionary["id"]);
+		itemType	= (ItemTypes)System.Enum.Parse(typeof(BaseItem.ItemTypes), itemsDictionary["item_type"].ToString());
+	}
+
+	//Stats
+	private int strength;
+	private int intelligence;
+	private int crit;
+	private int stamina;
+	private int dexterity;
+	
+	public int Strength {
+		get { return strength; }
+		set { strength = value; }
+	}
+	
+	public int Intelligence {
+		get { return intelligence; }
+		set { intelligence = value; }
+	}
+	
+	public int Crit {
+		get { return crit; }
+		set { crit = value; }
+	}
+	
+	public int Stamina {
+		get {return stamina;}
+		set {stamina = stamina;}
+	}
+	
+	public int Dexterity {
+		get {return dexterity;}
+		set {stamina = dexterity;}
+	}
+
     private ItemTypes itemType;
 
     //Getter and setter

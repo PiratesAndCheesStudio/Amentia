@@ -23,8 +23,8 @@ public class CreateNewPotion : MonoBehaviour {
         createPotion();
         Debug.Log(newPotion.ItemName);
         Debug.Log(newPotion.ItemDescription);
-        Debug.Log(newPotion.ItemID.ToString());
-        Debug.Log(newPotion.PotionType.ToString());
+        Debug.Log(newPotion.ItemID);
+        Debug.Log(newPotion.PotionType);
     }
 
     public void createPotion() {
@@ -36,21 +36,7 @@ public class CreateNewPotion : MonoBehaviour {
     }
 
     private void choosePotionType() {
-        int randTemp = Random.Range(1, 4);
-
-        switch (randTemp) {
-            case 1:
-                newPotion.PotionType = BasePotion.PotionTypes.HEALTH;
-                break;
-            case 2:
-                newPotion.PotionType = BasePotion.PotionTypes.INTELLECT;
-                break;
-            case 3:
-                newPotion.PotionType = BasePotion.PotionTypes.MANA;
-                break;
-            case 4:
-                newPotion.PotionType = BasePotion.PotionTypes.SPEED;
-                break;
-        }
+		System.Array potions = System.Enum.GetValues(typeof(BasePotion.PotionTypes));
+		newPotion.PotionType = (BasePotion.PotionTypes)potions.GetValue(Random.Range(0, potions.Length));
     }
 }

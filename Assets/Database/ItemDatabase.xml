@@ -1,0 +1,14 @@
+<!--
+ITEM DATA BASE FOR AMENTIA
+YOU CAN ADD HERE YOUR ITEMS FOR THE GAME
+-->
+<item>
+	<id>1</id>
+	<item_name>My awsome Item</item_name>
+	<item_type>WEAPON</item_type>
+</item>
+<item>
+	<id>2</id>
+	<item_name>My awsome Item2</item_name>
+	<item_type>WEAPON</item_type>
+</item>

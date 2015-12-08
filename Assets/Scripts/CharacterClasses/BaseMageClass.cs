@@ -16,15 +16,7 @@ public class BaseMageClass : BaseCharachterClass {
 		//Charinfo
         CharacterClassName 			= "Mage";
         CharacterClassDescription 	= "This is a awsome Mage!";
-
-		// Stats
-		Stamina 	= 12;
-		Intellect 	= 12;
-		Strength 	= 8;
-		Agillity 	= 5;
-		Dexterity 	= 3;
-		Trading 	= 5;
-		Luck 		= 5;
-		Crit 		= 2;
+		MainStatBonuses = mainStatBonuses.INTELLECT;
+		SecondStatBonuses = secondStatBonuses.DEXTERITY;
     }
 }

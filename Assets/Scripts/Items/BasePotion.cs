@@ -6,17 +6,23 @@
 */
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class BasePotion : BaseStatItem {
+
+public class BasePotion : BaseItem {
 
     public enum PotionTypes {
         HEALTH,
         MANA,
         INTELLECT,
-        SPEED
+        DEXTERITY,
+		STRENGTH,
+		AGILLITY
     }
 
     private PotionTypes potionType;
+
+	public BasePotion(Dictionary<string, string> itemsDictionary) : base(itemsDictionary){}
 
     //Getter setter
     public PotionTypes PotionType {

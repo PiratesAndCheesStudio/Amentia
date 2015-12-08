@@ -7,8 +7,9 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
-public class BaseWeapon : BaseStatItem {
+public class BaseWeapon : BaseItem {
 
     public enum WeaponTypes {
         SWORD,
@@ -19,6 +20,8 @@ public class BaseWeapon : BaseStatItem {
     }
 
     private WeaponTypes weaponType;
+
+	public BaseWeapon(Dictionary<string, string> itemsDictionary) : base(itemsDictionary){}
 
     //Getter setter
     public WeaponTypes WeaponType {

@@ -7,9 +7,10 @@
 
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [System.Serializable]
-public class BaseEquipement : BaseStatItem {
+public class BaseEquipement : BaseItem {
 
     public enum EquipementTypes {
         HEAD,
@@ -23,6 +24,8 @@ public class BaseEquipement : BaseStatItem {
     }
 
     private EquipementTypes equipementType;
+
+	public BaseEquipement(Dictionary<string, string> itemsDictionary) : base(itemsDictionary){}
 
     public EquipementTypes EquipementType {
         get { return equipementType;  }
